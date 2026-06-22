@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling>=1.26.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-index-tools-talordata-serp"
+version = "0.1.0"
+description = "Talordata SERP tools for LlamaIndex agents."
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+license = { text = "MIT" }
+authors = [
+  { name = "Talordata" }
+]
+keywords = ["llama-index", "serp", "search", "talordata"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+  "llama-index-core>=0.12.0",
+  "pydantic>=2.0.0,<3.0.0",
+  "requests>=2.32.0,<3.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0,<9.0.0",
+  "responses>=0.25.0,<1.0.0"
+]
+openai = [
+  "llama-index-llms-openai>=0.3.0"
+]
+
+[project.urls]
+Homepage = "https://www.talordata.com"
+
+[tool.llamahub]
+contains_example = true
+import_path = "llama_index.tools.talordata_serp"
+
+[tool.llamahub.class_authors]
+TalordataSerpToolSpec = "Talordata"
+
+[tool.hatch.build.targets.wheel]
+packages = ["llama_index"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
