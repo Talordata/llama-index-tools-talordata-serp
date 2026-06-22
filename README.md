@@ -1,5 +1,13 @@
 # LlamaIndex Tools Integration: Talordata SERP
 
+**LlamaIndex Tools Integration: Talordata SERP**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+
+
+
+
 This package connects LlamaIndex agents to the Talordata SERP API for live web, image, and news search.
 
 It exposes a `TalordataSerpToolSpec` that can be converted into LlamaIndex tools with `to_tool_list()`.
