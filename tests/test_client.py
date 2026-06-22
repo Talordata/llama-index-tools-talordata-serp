@@ -31,6 +31,7 @@ def test_serp_client_posts_form_encoded_request():
     call = responses.calls[0].request
     assert call.headers["Authorization"] == "Bearer sk_test"
     assert call.headers["Content-Type"] == "application/x-www-form-urlencoded"
+    assert call.headers["Origin"] == "Llamaindex"
     assert call.body == "engine=google&q=coffee&num=3&json=2"
 
 

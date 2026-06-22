@@ -42,6 +42,8 @@ openai = [
 
 [project.urls]
 Homepage = "https://www.talordata.com"
+Repository = "https://github.com/Talordata/llama-index-tools-talordata-serp"
+Issues = "https://github.com/Talordata/llama-index-tools-talordata-serp/issues"
 
 [tool.llamahub]
 contains_example = true

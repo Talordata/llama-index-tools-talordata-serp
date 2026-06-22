@@ -17,7 +17,7 @@ It exposes a `TalordataSerpToolSpec` that can be converted into LlamaIndex tools
 Install from PyPI:
 
 ```powershell
-python -m pip install llama-index llama-index-core llama-index-tools-talordata-serp
+python -m pip install llama-index-tools-talordata-serp
 ```
 
 For local development from source:
@@ -90,16 +90,26 @@ python -m pip install "llama-index-llms-openai>=0.3.0"
 ```
 
 ```python
+import asyncio
+
 from llama_index.core.agent.workflow import FunctionAgent
 from llama_index.llms.openai import OpenAI
 from llama_index.tools.talordata_serp import TalordataSerpToolSpec
 
-tool_spec = TalordataSerpToolSpec(api_key="sk_xxx")
 
-agent = FunctionAgent(
-    tools=tool_spec.to_tool_list(),
-    llm=OpenAI(model="gpt-4.1"),
-)
+async def main() -> None:
+    tool_spec = TalordataSerpToolSpec(api_key="sk_xxx")
+
+    agent = FunctionAgent(
+        tools=tool_spec.to_tool_list(),
+        llm=OpenAI(model="gpt-4.1"),
+    )
+
+    response = await agent.run("Find three recent search results for coffee market trends.")
+    print(response)
+
+
+asyncio.run(main())
 ```
 
 ## Tools
@@ -244,9 +254,9 @@ Try TalorData SERP API with **1,000 free searches** and start building AI agents
 Have questions or want to collaborate? Reach out through any of the following channels:
 
 - 📧 **Email:** [support@talordata.com](mailto:support@talordata.com)  
-- 🌐 **Website:** [https://talordata.com](	https://talordata.com/?campaignid=hiy46bmdwF990Hqs&utm_source=Github29&utm_term=Github29)   
+- 🌐 **Website:** [https://talordata.com](https://talordata.com/?campaignid=hiy46bmdwF990Hqs&utm_source=Github29&utm_term=Github29)   
 - 📱 **WhatsApp:** [+852 5628 3471](https://wa.me/85256283471)  
-- 💼 **LinkedIn:** [TalorData](linkedin.com/company/talordata)
+- 💼 **LinkedIn:** [TalorData](https://linkedin.com/company/talordata)
 
 ---
 
