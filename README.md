@@ -1,4 +1,4 @@
-**LlamaIndex integration for TalorData SERP API**
+# LlamaIndex integration for TalorData SERP API
 
 [**TalorData**](https://www.talordata.com/serp-api/llamaindex?campaignid=iiJFnZLYEox652MG&utm_source=LlamaIndex&utm_term=LlamaIndex) helps developers and AI applications connect to real-time, structured, and reliable search data through a single SERP API. With support for Google, Bing, News, Images, Shopping, Maps, Scholar, Trends, and more, TalorData makes it easier to build AI agents, search copilots, SEO workflows, and data-driven automations powered by live search results.
 
@@ -198,7 +198,7 @@ Set `include_raw=True` on normal tools when the caller needs the full�
 
 ## Resources
 
-*   PyPI: [LlamaIndex-talordata](https://pypi.org/project/llama-index-tools-talordata-serp/0.1.3/)
+*   PyPI: [LlamaIndex-talordata](https://pypi.org/project/llama-index-tools-talordata-serp/0.1.4/)
     
 *   TalorData: [talordata.com](https://www.talordata.com/serp-api/llamaindex?campaignid=iiJFnZLYEox652MG&utm_source=LlamaIndex&utm_term=LlamaIndex)
     
@@ -222,4 +222,4 @@ Ready to build AI agents with real-time search in LlamaIndex?
 **Read the** [**Integration Documentation**](https://docs.talordata.com/serp-api/integration/sdk-integration/how-to-integrate-talordata-with-llamaindex)
 
 ---
-> **TalorData brings real-time search to LlamaIndex, enabling developers to build AI agents and workflows with fresh, structured, and reliable search data.**
+> **TalorData brings real‑time search to LlamaIndex, enabling developers to build AI agents and workflows with fresh, structured, and reliable search data.**
