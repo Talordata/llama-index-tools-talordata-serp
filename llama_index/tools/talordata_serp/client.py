@@ -37,6 +37,7 @@ class SerpClient:
             headers={
                 "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/x-www-form-urlencoded",
+                "Origin": "Llamaindex",
             },
             timeout=self.timeout,
         )
